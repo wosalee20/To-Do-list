@@ -24,12 +24,23 @@ document.addEventListener('DOMContentLoaded', function () {
         editButton.addEventListener('click', function () {
             const currentTaskName = listItem.querySelector('span:first-child').textContent;
             const newTaskName = prompt('Edit Task', currentTaskName);
-
+        
             if (newTaskName !== null) {
                 listItem.querySelector('span:first-child').textContent = newTaskName;
-                updateLocalStorage();
+        
+                // Prompt the user to edit the due date and time
+                const newDueDate = prompt('Edit Due Date', dueDate);
+                const newDueTime = prompt('Edit Due Time', dueTime);
+        
+                if (newDueDate !== null && newDueTime !== null) {
+                    dueDate = newDueDate;
+                    dueTime = newDueTime;
+                    listItem.querySelector('span:nth-child(2)').textContent = `${dueDate} at ${dueTime}`;
+                    updateLocalStorage();
+                }
             }
         });
+        
 
         deleteButton.addEventListener('click', function () {
             listItem.remove();

@@ -1,102 +1,110 @@
 body {
-	font-family: Arial, sans-serif;
-	background-color: #f4f4f4;
-	color: #333;
-	margin: 0;
-	padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    
 }
 
 .header {
-	background-color: #333;
-	color: #fff;
-	padding: 20px;
-	text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
 .container {
-	max-width: 600px;
-	margin: 0 auto;
-	padding: 20px;
-	background-color: #fff;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .form {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 input[type="text"],
 input[type="date"],
 input[type="time"],
 button {
-	padding: 10px;
-	border: 1px solid #ccc;
-}
-
-input[type="text"],
-input[type="date"],
-input[type="time"] {
-	flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    flex: 1; /* Added this to make input fields expand to fill available space */
 }
 
 button {
-	background-color: #333;
-	color: #fff;
-	border: none;
-	cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
 }
 
 button:hover {
-	background-color: #555;
+    background-color: #555;
 }
 
 ul {
-	list-style: none;
-	padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 li {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	margin-top: 10px;
-	background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
+    background-color: #fff;
 }
 
 li button {
-    
-	background-color: #ff6347;
-	color: #fff;
-	border: none;
-	padding: 5px 10px;
-	border-radius: 4px;
-	cursor: pointer;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 li button:hover {
-	background-color: #ff3b21;
+    background-color: #ff3b21;
 }
 
-@media screen (max-width: 600px) {
-	.container {
-		max-width: 100%;
-		padding: 10px;
-	}
+@media screen and (max-width: 600px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
 
-	.form {
-		flex-direction: column;
-	}
+    .form {
+        flex-direction: column; /* Changed to column for small screens */
+    }
 
-	input[type="text"],
-	input[type="date"],
-	input[type="time"],
-	button {
-		padding: 8px;
-	}
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    button {
+        padding: 8px;
+    }
+
+    li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-top: 10px;
+        background-color: #fff;
+        font
+    }
 }

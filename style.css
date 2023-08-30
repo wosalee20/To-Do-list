@@ -63,6 +63,9 @@ li {
     border-radius: 4px;
     margin-top: 10px;
     background-color: #fff;
+    margin-top: 10px;
+
+    
 }
 
 li button {
@@ -72,6 +75,8 @@ li button {
     padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
+    margin-right: 10px;
+    
 }
 
 li button:hover {
@@ -105,6 +110,8 @@ li button:hover {
         border-radius: 4px;
         margin-top: 10px;
         background-color: #fff;
-        font
+        margin-right: 10px;
+        text-transform: capitalize;
+        font-weight: 700;
     }
 }
